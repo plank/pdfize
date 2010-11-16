@@ -7,16 +7,16 @@ Uses dompdf (v0.6.0beta1) for PDF generation. http://code.google.com/p/dompdf/
 
 You could probably plug it in to a different engine - since this plugin was started, there have been a few others that look promising. But at the time, dompdf was the simplest I could find that did what we needed it to do.
 
-Should work with CakePHP 1.2 & 1.3. I've used it with both. You can see an example of its usage in the [expozine](http://github.com/meeech/expozine) project.
+Should work with CakePHP 1.2 & 1.3. I've used it with both. You can see an example of its usage in the [expozine](https://github.com/meeech/expozine/commit/dc5e2d775c39a39a615887735a5a0413ae76143b) project.
 
 Things you should know
 ----------------------
 
-* [dompdf](http://code.google.com/p/dompdf/) in the pdfize/vendors folder. As a convenience, I have included that library with this plugin.
+* [dompdf](http://code.google.com/p/dompdf/) in the pdfize/vendors folder. As a convenience, I have included that library with this plugin. You should go there to make sure you have the laest copy of the lib. 
 * PDFize will look for **views/layouts/pdf.ctp**. If that doesn't exist, will fallback to **plugins/pdfize/views/layouts/pdf.ctp**
     * re: **views/layouts/pdf.ctp** Treat it just like any other layout. 
 * You will need a view for the action, as usual. 
-* For images, you will probably need to output the full http::// path. I didn't have much luck with relative. 
+* For images, you will probably need to output the full http:// path. I didn't have much luck with relative. 
 * The PDF file outputted is named based on Inflector::slug($controller->pageTitle), otherwise it falls back on Inflector::slug($controller->name.' '.$controller->action)
 * Depending on the amount of images and whatnot, you might have to up your memory limit.
 In PdfComponent::shutdown() we use **ini\_set('memory_limit', '96M')**; 
