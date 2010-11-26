@@ -2,7 +2,7 @@
 /**
  * PdfComponent
  *
- * Tested: Cake 1.2
+ * Tested: Cake 1.2 & 1.3
  *
  * Simple glue between dompdf (http://www.digitaljunkies.ca/dompdf/) and cakephp
  * Allows setting any controller action as PDF output.
